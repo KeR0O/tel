@@ -1,33 +1,28 @@
-import requests
-import random
-kn = 0
-nk = 0
-
-print('  Tool Check user telegram :\n  programmer kabos\n  Have Fun ')
-print('- - - - -')
-k = '2021068735'
-t = '2086501602:AAHWXZ1yNZKXU1DDf7dX6X8RjzbiXZbPAwc'
-message = requests.get("https://api.telegram.org/bot"+str(t)+"/sendMessage?chat_id="+str(k)+"&text= ⌔ New Start! ").json()
-id_msg = str(message['result']["message_id"])
-print('- '*9)
-oh = 'qwertyuiopasdfghjklzxcvbnm0987654321'
-op = 'qwertyuiopasdfghjklzxcvbnm0987654321'
-while True :
-    ok = str("".join(random.choice(oh)for i in range(1)))
-    on = str("".join(random.choice(op)for i in range(1)))
-    os = ok+ok + '_' + ok+ok+ on
-    oa = requests.get(f'https://t.me/{os}').text
-    if 'tgme_username_link' in oa:
-        print(f'\r [{kn}] : DonE  ')
-        kn+=1
-        tb = f'https://api.telegram.org/bot{t}/sendMessage?chat_id={k}&text= ⌔ 𝚔𝚎𝚛𝚘𝚘 < @{os} >'
-        i = requests.post(tb)
-    else:
-        print(f'\r [{nk}] : ErooR  ')
-        nk+=1
-        requests.post(f"""https://api.telegram.org/bot{t}/editmessagetext?chat_id={k}&message_id={id_msg}&text= ⌔ Checking in progress .
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-⌔ user : {os} :
-⌔️ available {kn} :
-⌔ unavailable {nk} :
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉.""")
+import os,sys,subprocess
+subprocess.getoutput("pip install requests")
+import requests,sys,os,time
+#هاا حبي تريد تخمط 
+import requests,time,random,os,sys
+TOKEN=input('\033[1;33m 𝚃𝙾𝙺𝙴𝙽 :')
+ID=input('\033[1;31m 𝙸𝙳 :')
+os.system('clear')
+MM=int(input('\033[1;31m [^]\033[1;36m AMOUNT OF USER :\033[1;37m'))
+os.system('clear')
+oip='qwertyuioplkjhgfdsazxcvbnm'
+upper = 'ABCDEFGHIKLMNOPQSTVWSYZ'
+number = '0987654321'
+uu7='_'
+all  = number + upper +oip
+length = 1
+for e in range(MM):
+	u= ''.join(random.sample(all,length))
+	s= ''.join(random.sample(all,length))
+	r= ''.join(random.sample(all,length))
+	kk=(r+r+r+s+s)
+	ree = requests.get(f'https://t.me/{kk}').text
+	if 'tgme_username_link' in ree:
+		Account = requests.post(f'https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={ID}&text=• 𝚄𝚂𝙴𝚁 𝙵𝙾𝚁 𝚈𝙾𝚄 ♕︎\n ◈ ━━━━━━━ ❌ ━━━━━━━ ◈\n\n-𝚄𝚂𝙴𝚁 : @{kk} ‼️\n\n◈ ━━━━━━━ ❌ ━━━━━━━ ◈\n-𝙱𝚈 :  ⭕')
+		print(f'\033[1;32m Available:{kk} ')
+		
+	else:
+		print(f' \033[1;31mNOT Available:{kk}')
